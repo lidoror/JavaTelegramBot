@@ -1,23 +1,26 @@
 package com.TelegramBot.codeHandler;
 
-import com.TelegramBot.codeHandler.Execution;
+import lombok.Getter;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
+
 public class Bot extends TelegramLongPollingBot {
     private final String botToken = "2048860538:AAFMupTOQMxziYSLG6dPCNbdYKEHbK0KgCE";
     private final String botName = "MYBionicBot";
+    private final String betaBotToken = "5135837266:AAGJOCmtNptX7oIakihmVBWbXKvgVPDuEOY";
+    private final String betaBotName = "BetaTestingBot";
 
     @Override
     public String getBotUsername() {
-        return botName;
+        return betaBotName;
     }
 
     @Override
     public String getBotToken() {
-        return botToken;
+        return betaBotToken;
     }
 
     @Override
